@@ -1,0 +1,89 @@
+.App {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: bisque;
+}
+
+#chat-container {
+  width: 400px;
+  padding-top: 5px
+}
+
+#messagesFeed {
+  border-radius: 40px 40px 0 0;
+  height: 500px;
+  padding: 10px;
+  background-color: #4f5786;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column-reverse
+}
+
+.chat-bubble {
+  display: flex;
+  padding: 0 10px;
+  position: relative;
+}
+
+.chat-bubble>p {
+  padding: 10px;
+  font-weight: 500;
+  color: #4f5786;
+  background-color: lightblue;
+  border-radius: 0 20px 20px 20px;
+  border-bottom: solid 4px #3a396e;
+}
+
+.chat-bubble span {
+  font-weight: bold;
+  /* opacity: 0.7; */
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  font-size: 10px;
+  color: #eee
+}
+
+.chat-bubble.own {
+  flex-direction: row-reverse
+}
+
+.chat-bubble.own>p {
+  background-color: lightgreen;
+  border-bottom: solid 4px green;
+  border-radius: 20px 20px 0 20px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+}
+
+form>textarea {
+  border: none;
+  padding: 20px;
+  flex: 1;
+  border-radius: 0 0 0 40px;
+  background-color: white;
+  border-bottom: solid 4px #b4b4b4;
+  resize: none;
+}
+
+form>textarea:focus {
+  background-color: lightyellow
+}
+
+form>button {
+  padding: 20px;
+  background-color: #8f87e6;
+  border: none;
+  color: white;
+  font-weight: bold;
+  width: 100px;
+  cursor: pointer;
+  border-radius: 0 0 40px 0;
+  border-bottom: solid 4px #515195;
+}
